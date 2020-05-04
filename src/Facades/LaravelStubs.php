@@ -14,6 +14,6 @@ class LaravelStubs extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'laravelstubs';
+        return 'laravel-stubs';
     }
 }

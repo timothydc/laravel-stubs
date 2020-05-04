@@ -29,7 +29,7 @@ class LaravelStubsServiceProvider extends ServiceProvider
     public function register()
     {
         // Register the service the package provides.
-        $this->app->singleton('laravelstubs', function ($app) {
+        $this->app->singleton('laravel-stubs', function ($app) {
             return new LaravelStubs;
         });
     }
@@ -41,7 +41,7 @@ class LaravelStubsServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['laravelstubs'];
+        return ['laravel-stubs'];
     }
 
     /**

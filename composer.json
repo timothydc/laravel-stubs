@@ -10,7 +10,7 @@
         }
     ],
     "homepage": "https://github.com/timothydc/laravel-stubs",
-    "keywords": ["timothydc", "laravel stubs"],
+    "keywords": ["timothydc"],
     "require": {
         "php": "^7.4"
     },
