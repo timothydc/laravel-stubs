@@ -15,11 +15,6 @@ class LaravelStubsServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'timothydc');
-        // $this->loadViewsFrom(__DIR__.'/../resources/views', 'timothydc');
-        // $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
-        // $this->loadRoutesFrom(__DIR__.'/routes.php');
-
         // Publishing is only necessary when using the CLI.
         if ($this->app->runningInConsole()) {
             $this->bootForConsole();
@@ -33,8 +28,6 @@ class LaravelStubsServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/laravelstubs.php', 'laravelstubs');
-
         // Register the service the package provides.
         $this->app->singleton('laravelstubs', function ($app) {
             return new LaravelStubs;
@@ -58,27 +51,6 @@ class LaravelStubsServiceProvider extends ServiceProvider
      */
     protected function bootForConsole()
     {
-        // Publishing the configuration file.
-        $this->publishes([
-            __DIR__ . '/../config/laravelstubs.php' => config_path('laravelstubs.php'),
-        ], 'laravelstubs.config');
-
-        // Publishing the views.
-        /*$this->publishes([
-            __DIR__.'/../resources/views' => base_path('resources/views/vendor/timothydc'),
-        ], 'laravelstubs.views');*/
-
-        // Publishing assets.
-        /*$this->publishes([
-            __DIR__.'/../resources/assets' => public_path('vendor/timothydc'),
-        ], 'laravelstubs.views');*/
-
-        // Publishing the translation files.
-        /*$this->publishes([
-            __DIR__.'/../resources/lang' => resource_path('lang/vendor/timothydc'),
-        ], 'laravelstubs.views');*/
-
-        // Registering package commands.
         $this->commands([
             MakeActionCommand::class
         ]);
