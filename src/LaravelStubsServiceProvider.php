@@ -22,29 +22,6 @@ class LaravelStubsServiceProvider extends ServiceProvider
     }
 
     /**
-     * Register any package services.
-     *
-     * @return void
-     */
-    public function register()
-    {
-        // Register the service the package provides.
-        $this->app->singleton('laravel-stubs', function ($app) {
-            return new LaravelStubs;
-        });
-    }
-
-    /**
-     * Get the services provided by the provider.
-     *
-     * @return array
-     */
-    public function provides()
-    {
-        return ['laravel-stubs'];
-    }
-
-    /**
      * Console-specific booting.
      *
      * @return void
