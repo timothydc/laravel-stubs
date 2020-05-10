@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace TimothyDC\LaravelStubs\Console\Commands;
+namespace TimothyDC\Stubs\Console\Commands;
 
 use Illuminate\Console\GeneratorCommand;
 use Symfony\Component\Console\Input\InputArgument;

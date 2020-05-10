@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
 
-namespace TimothyDC\LaravelStubs;
+namespace TimothyDC\Stubs;
 
 use Illuminate\Support\ServiceProvider;
-use TimothyDC\LaravelStubs\Console\Commands\MakeActionCommand;
+use TimothyDC\Stubs\Console\Commands\MakeActionCommand;
 
-class LaravelStubsServiceProvider extends ServiceProvider
+class StubsServiceProvider extends ServiceProvider
 {
     /**
      * Perform post-registration booting of services.
